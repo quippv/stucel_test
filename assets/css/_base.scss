@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+
+// Global Reset
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  color: #fff;
+  background: #000;
+}
+
+// Font
+$font-titillium-web: "Titillium Web", sans-serif;
+$font-lato: "Lato", sans-serif;
+
+// Typography
+h1 {
+  font-family: $font-titillium-web;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+h2 {
+  font-family: $font-titillium-web;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 28px;
+}
+
+h3 {
+  font-family: $font-titillium-web;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+p {
+  font-family: $font-lato;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.paragraph {
+  font-family: $font-lato;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.helper--text {
+  font-family: $font-lato;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+// Icons
+.burger-menu {
+  width: 23.5px;
+  height: 1px;
+  background: #707070;
+  position: relative;
+  transition: 0.5s;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    transition: 0.5s;
+    width: 100%;
+    height: 1px;
+    background: #707070;
+    position: absolute;
+    left: 0;
+  }
+
+  &::before {
+    top: -10px;
+  }
+
+  &::after {
+    top: 10px;
+  }
+}
+
+.burger-menu.toggle {
+  background: transparent;
+
+  &::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+  &::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+}
